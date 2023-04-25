@@ -59,4 +59,34 @@ $(document).ready(function () {
   		autoplaySpeed: 1500
 	});
 
+	$('.gallery_slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		dots: true,
+		fade: true,
+		arrows: false
+	});
+
+	$('.properties_single_wrap_slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		fade: true,
+		autoplay: true,
+		speed: 600,
+		autoplaySpeed: 1500,
+		infinite: true,
+		dots: true,
+		prevArrow: $('.properties_single_wrap_prev'),
+        nextArrow: $('.properties_single_wrap_next')
+	});
+
+	$(".amenities_nav_item").click(function() {
+		$(".amenities_nav_item").removeClass("active");
+		$(this).addClass("active");
+		var attr = $(this).attr("data-target");
+		$(".amenities_block_item").removeClass("active");
+		$(`#${attr}`).addClass("active");
+	});
+
 });
