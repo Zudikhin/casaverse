@@ -1,8 +1,12 @@
 $(document).ready(function () {
     "use strict";
 
-	$(".header_block_burger").click(function() {
+	$(".header_block_btn").click(function() {
 		$(this).toggleClass("active");
+		$(".header_drop").slideToggle();
+		$(".main").toggleClass("open");
+		$(".about_main").toggleClass("open");
+		$(".properties_single").toggleClass("open");
 	});
 
 	$('.featured_slider').slick({
@@ -46,17 +50,6 @@ $(document).ready(function () {
 		dots: false,
 		prevArrow: $('.testimonials_desk_arrows_prev'),
         nextArrow: $('.testimonials_desk_arrows_next')
-	});
-
-	$('.blog_block_left').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		infinite: true,
-		dots: false,
-		arrows: false,
-		autoplay: true,
-		fade: true,
-  		autoplaySpeed: 1500
 	});
 
 	$('.gallery_slider').slick({

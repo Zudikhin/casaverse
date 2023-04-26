@@ -49,6 +49,30 @@
             </a>
           </div>
         </div>
+        <div class="header_drop">
+          <div class="header_drop_left">
+            <ul>
+              <li class="current-menu-item">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Properties</a>
+              </li>
+              <li>
+                <a href="#">Projects</a>
+              </li>
+              <li>
+                <a href="#">Neighborhoods</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -101,6 +125,8 @@
       </div>
     </section>
 
+    <div class="test_arrow"></div>
+
     <section class="featured">
       <div class="container">
         <div class="featured_nav">
@@ -126,7 +152,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -152,7 +178,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -178,7 +204,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -204,7 +230,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -230,7 +256,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -256,7 +282,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -282,7 +308,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -308,7 +334,7 @@
             </div>
             <div class="featured_slider_item_text_bottom">
               <div class="featured_slider_item_text_bottom_left">
-                <img src="img/featured/small_arrow.svg" alt="">
+                <div class="featured_slider_item_text_bottom_left_arrow"></div>
                 <span>FOR SALE</span>
               </div>
               <div class="featured_slider_item_text_bottom_right">
@@ -575,61 +601,47 @@
         <h2>Our Blog</h2>
         <div class="blog_block">
           <div class="blog_block_left">
-            <div class="blog_block_left_item">
+            <div id="blog_1" class="blog_block_left_item active">
               <img src="img/blog/1.jpg" alt="">
             </div>
-            <div class="blog_block_left_item">
+            <div id="blog_2" class="blog_block_left_item">
               <img src="img/blog/3.png" alt="">
             </div>
-            <div class="blog_block_left_item">
+            <div id="blog_3" class="blog_block_left_item">
               <img src="img/blog/4.png" alt="">
-            </div>
-            <div class="blog_block_left_item">
-              <img src="img/blog/3.png" alt="">
             </div>
           </div>
           <div class="blog_block_wrap">
             <div class="blog_block_right">
-              <a class="blog_block_right_item" href="#">
+              <a data-target="blog_1" class="blog_block_right_item" href="#">
                 <img class="blog_block_right_item_main" src="img/blog/3.png" alt="">
                 <div class="blog_block_right_item_text">
                   <h3>1.Cavalli Casa Tower</h3>
                   <p>A Luxurious Lifestyle in the Heart of Dubai Marina</p>
                   <div class="blog_block_right_item_text_arrow">
-                    <img src="img/blog/arrow.svg" alt="">
+                    <div class="blog_block_right_item_text_arrow_line"></div>
                     <span>Reed More</span>
                   </div>
                 </div>
               </a>
-              <a class="blog_block_right_item" href="#">
+              <a data-target="blog_2" class="blog_block_right_item" href="#">
                 <img class="blog_block_right_item_main" src="img/blog/3.png" alt="">
                 <div class="blog_block_right_item_text">
                   <h3>2.Unlocking Your Dream Home</h3>
                   <p>The CasaverseGuide to Finding the Perfect Propertyin Dubai</p>
                   <div class="blog_block_right_item_text_arrow">
-                    <img src="img/blog/arrow.svg" alt="">
+                    <div class="blog_block_right_item_text_arrow_line"></div>
                     <span>Reed More</span>
                   </div>
                 </div>
               </a>
-              <a class="blog_block_right_item" href="#">
+              <a data-target="blog_3" class="blog_block_right_item" href="#">
                 <img class="blog_block_right_item_main" src="img/blog/4.png" alt="">
                 <div class="blog_block_right_item_text">
                   <h3>3.Dubai Real Estate Market Forecast</h3>
                   <p>Is It Time to Invest?</p>
                   <div class="blog_block_right_item_text_arrow">
-                    <img src="img/blog/arrow.svg" alt="">
-                    <span>Reed More</span>
-                  </div>
-                </div>
-              </a>
-              <a class="blog_block_right_item" href="#">
-                <img class="blog_block_right_item_main" src="img/blog/1.jpg" alt="">
-                <div class="blog_block_right_item_text">
-                  <h3>test lorem lorem</h3>
-                  <p>Lorem lorem lorem lorem lorem</p>
-                  <div class="blog_block_right_item_text_arrow">
-                    <img src="img/blog/arrow.svg" alt="">
+                    <div class="blog_block_right_item_text_arrow_line"></div>
                     <span>Reed More</span>
                   </div>
                 </div>
@@ -735,3 +747,11 @@
     
   </body>
 </html>
+
+<script>
+  $(".blog_block_right_item").hover(function() {
+    var attr = $(this).attr("data-target");
+    $(".blog_block_left_item").removeClass("active");
+    $(`#${attr}`).addClass("active");
+  });
+</script>
