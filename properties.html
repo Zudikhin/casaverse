@@ -7,6 +7,7 @@
     <title>Document</title>
     <meta name="author" content="Yuriy Zudikhin" />
     <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
     <link rel="stylesheet" href="css/nouislider.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -97,9 +98,88 @@
 
     <section class="properties">
       <div class="container">
-        <!-- <div class="properties_filter">
-          <div class=""></div>
-        </div> -->
+        <div class="properties_mob_filter">
+          <div class="properties_mob_filter_top">
+            <span>Filter</span>
+            <img src="img/properties/arrow_small.svg" alt="">
+          </div>
+          <div class="properties_mob_filter_body">
+            <div class="properties_mob_filter_body_left">
+              <span class="properties_mob_filter_body_left_name">Price</span>
+              <div id="rangeMob" class="properties_mob_filter_body_left_range"></div>
+              <div class="properties_mob_filter_body_left_price">
+                <span id="mobMin"></span>
+                <span id="mobMax"></span>
+              </div>
+            </div>
+            <div class="properties_mob_filter_body_center">
+              <span class="properties_mob_filter_body_center_name">Properties Type</span>
+              <div class="properties_mob_filter_body_center_list">
+                <label>All
+                  <input type="radio" checked="checked" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Sale
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+                <label>Rent
+                  <input type="radio" name="radio">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <div class="properties_mob_filter_body_right">
+              <span class="properties_mob_filter_body_right_name">Location</span>
+              <select name="" id="">
+                <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+                <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+                <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+                <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+                <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+                <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="properties_filter">
+          <div class="properties_filter_left">
+            <span class="properties_filter_left_name">Price</span>
+            <div id="range" class="properties_filter_left_range"></div>
+            <div class="properties_filter_left_price">
+              <span id="deskMin"></span>
+              <span id="deskMax"></span>
+            </div>
+          </div>
+          <div class="properties_filter_center">
+            <span class="properties_filter_center_name">Properties Type</span>
+            <div class="properties_filter_center_list">
+              <label>All
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label>Sale
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+              <label>Rent
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+          <div class="properties_filter_right">
+            <span class="properties_filter_right_name">Location</span>
+            <select name="" id="">
+              <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+              <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+              <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+              <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+              <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+              <option value="Downtown Burj Khalifa">Downtown Burj Khalifa</option>
+            </select>
+          </div>
+        </div>
         <div class="properties_block">
 
           <a class="properties_block_item" href="#">
@@ -486,11 +566,68 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/slick.js"></script>
     <script src="js/nouislider.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
     <script src="js/main.js"></script>
     
   </body>
 </html>
 
 <script>
+  var slider = document.getElementById('range');
 
+  noUiSlider.create(slider, {
+    start: [50000, 1000000],
+    connect: true,
+    step: 5000,
+    range: {
+      'min': 55000,
+      'max': 1000000
+    }
+  });
+
+  var paddingMin = document.getElementById('deskMin');
+  var paddingMax = document.getElementById('deskMax');
+
+  slider.noUiSlider.on('update', function (values, handle) {
+    if (handle) {
+      var num_one = values[handle].slice(0,-3);
+      paddingMax.innerHTML = num_one;
+    } else {
+      var num_two = values[handle].slice(0,-3);
+      paddingMin.innerHTML = num_two;
+    }
+  });
+</script>
+
+<script>
+
+  var sliderMob = document.getElementById('rangeMob');
+
+  noUiSlider.create(sliderMob, {
+    start: [50000, 1000000],
+    connect: true,
+    step: 5000,
+    range: {
+      'min': 55000,
+      'max': 1000000
+    }
+  });
+
+  var paddingMinMob = document.getElementById('mobMin');
+  var paddingMaxMob = document.getElementById('mobMax');
+
+  sliderMob.noUiSlider.on('update', function (values, handle) {
+    if (handle) {
+      var num_one = values[handle].slice(0,-3);
+      paddingMaxMob.innerHTML = num_one;
+    } else {
+      var num_two = values[handle].slice(0,-3);
+      paddingMinMob.innerHTML = num_two;
+    }
+  });
+
+</script>
+
+<script>
+  $("select").niceSelect();
 </script>

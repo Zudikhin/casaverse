@@ -102,4 +102,9 @@ $(document).ready(function () {
 		$(`#${attr}`).addClass("active");
 	});
 
+	$(".properties_mob_filter_top").click(function() {
+		$(this).toggleClass("active");
+		$(".properties_mob_filter_body").slideToggle();
+	});
+
 });
