@@ -1830,6 +1830,55 @@ input:focus {
   }
 }
 
+@-webkit-keyframes workDashLine {
+  from {
+    stroke-dashoffset: 1400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes workDashLine {
+  from {
+    stroke-dashoffset: 1400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes workDashLineMob {
+  from {
+    stroke-dashoffset: 650;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes workDashLineMob {
+  from {
+    stroke-dashoffset: 650;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes workDashArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes workDashArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .work {
   margin-top: 72px;
 }
@@ -1873,7 +1922,7 @@ input:focus {
 .work_block_wrap_text p a {
   color: #FFFFFF;
 }
-.work_block_wrap_text img {
+.work_block_wrap_text svg {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1881,11 +1930,37 @@ input:focus {
   bottom: -63px;
   width: auto;
 }
-.work_block_wrap_text img.desk {
+.work_block_wrap_text svg.desk {
   display: none;
 }
-.work_block_wrap_text img.mob {
+.work_block_wrap_text svg.mob {
   display: block;
+}
+.work_block_wrap_text .desk_line {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+}
+.work_block_wrap_text .desk_arrow {
+  opacity: 0;
+}
+.work_block_wrap_text .mob_line {
+  -webkit-animation: workDashLineMob 2.4s linear alternate forwards;
+          animation: workDashLineMob 2.4s linear alternate forwards;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+}
+.work_block_wrap_text .mob_arrow {
+  opacity: 0;
+  -webkit-animation: workDashArrow 0.1s linear 2.2s alternate forwards;
+          animation: workDashArrow 0.1s linear 2.2s alternate forwards;
+}
+.work_block_wrap_text.animation .desk_line {
+  -webkit-animation: workDashLine 3s linear alternate forwards;
+          animation: workDashLine 3s linear alternate forwards;
+}
+.work_block_wrap_text.animation .desk_arrow {
+  -webkit-animation: workDashArrow 0.1s linear 2.8s alternate forwards;
+          animation: workDashArrow 0.1s linear 2.8s alternate forwards;
 }
 .work_block_wrap_btn {
   width: 100%;
@@ -1964,13 +2039,13 @@ input:focus {
     font-size: 16px;
     line-height: 19px;
   }
-  .work_block_wrap_text img {
+  .work_block_wrap_text svg {
     bottom: -120px;
   }
-  .work_block_wrap_text img.desk {
+  .work_block_wrap_text svg.desk {
     display: block;
   }
-  .work_block_wrap_text img.mob {
+  .work_block_wrap_text svg.mob {
     display: none;
   }
   .work_block_wrap_btn {
@@ -2137,14 +2212,14 @@ input:focus {
   opacity: 0.7;
   margin-top: 20px;
 }
-.welcome_block_bot_text img {
+.welcome_block_bot_text svg {
   width: 100%;
   margin-top: 32px;
 }
-.welcome_block_bot_text img.desk {
+.welcome_block_bot_text svg.desk {
   display: none;
 }
-.welcome_block_bot_text img.mob {
+.welcome_block_bot_text svg.mob {
   display: block;
 }
 .welcome_block .star_big {
@@ -2157,10 +2232,10 @@ input:focus {
   .welcome_block_img {
     padding: 15px;
   }
-  .welcome_block_bot_text img.desk {
+  .welcome_block_bot_text svg.desk {
     display: block;
   }
-  .welcome_block_bot_text img.mob {
+  .welcome_block_bot_text svg.mob {
     display: none;
   }
 }
@@ -2236,6 +2311,55 @@ input:focus {
   }
 }
 
+@-webkit-keyframes founderDashLine {
+  from {
+    stroke-dashoffset: 370;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes founderDashLine {
+  from {
+    stroke-dashoffset: 370;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes founderDashLineMob {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes founderDashLineMob {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes founderDashArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes founderDashArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .founder {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2275,6 +2399,36 @@ input:focus {
   position: absolute;
   top: 14px;
   left: 8px;
+}
+.founder_block_wrap_right .desk_line {
+  stroke-dasharray: 370;
+  stroke-dashoffset: 370;
+}
+.founder_block_wrap_right .desk_arrow {
+  opacity: 0;
+}
+.founder_block_wrap_right .mob_line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+.founder_block_wrap_right .mob_arrow {
+  opacity: 0;
+}
+.founder_block_wrap_right.animation .desk_line {
+  -webkit-animation: founderDashLine 1.5s linear alternate forwards;
+          animation: founderDashLine 1.5s linear alternate forwards;
+}
+.founder_block_wrap_right.animation .desk_arrow {
+  -webkit-animation: workDashArrow 0.1s linear 1.4s alternate forwards;
+          animation: workDashArrow 0.1s linear 1.4s alternate forwards;
+}
+.founder_block_wrap_right.animation .mob_line {
+  -webkit-animation: founderDashLineMob 1.5s linear alternate forwards;
+          animation: founderDashLineMob 1.5s linear alternate forwards;
+}
+.founder_block_wrap_right.animation .mob_arrow {
+  -webkit-animation: workDashArrow 0.1s linear 1.4s alternate forwards;
+          animation: workDashArrow 0.1s linear 1.4s alternate forwards;
 }
 .founder_block_wrap_left {
   -webkit-box-ordinal-group: 3;
