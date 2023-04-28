@@ -45,8 +45,8 @@ $(document).ready(function () {
 	$('.neighborhoods_slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: true,
-  		autoplaySpeed: 1500,
+		// autoplay: true,
+  		// autoplaySpeed: 1500,
 		infinite: true,
 		centerMode: true,
 		variableWidth: true,

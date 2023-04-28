@@ -15,27 +15,24 @@
     <header class="header">
       <div class="container">
         <div class="header_block">
-          <a class="header_block_logo" href="#">
+          <a class="header_block_logo" href="https://zudikhin.github.io/casaverse/">
             <img src="img/header/logo.svg" alt="">
           </a>
           <ul>
             <li class="current-menu-item">
-              <a href="#">Home</a>
+              <a href="https://zudikhin.github.io/casaverse/">Home</a>
             </li>
             <li>
-              <a href="#">About Us</a>
+              <a href="https://zudikhin.github.io/casaverse/about.html">About Us</a>
             </li>
             <li>
-              <a href="#">Properties</a>
+              <a href="https://zudikhin.github.io/casaverse/properties.html">Properties</a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="https://zudikhin.github.io/casaverse/neighborhoods.html">Neighborhoods</a>
             </li>
             <li>
-              <a href="#">Neighborhoods</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
+              <a href="https://zudikhin.github.io/casaverse/blog.html">Blog</a>
             </li>
           </ul>
           <div class="header_block_btn">
@@ -44,7 +41,7 @@
             <span></span>
           </div>
           <div class="header_block_right">
-            <a href="#">
+            <a href="https://zudikhin.github.io/casaverse/contacts.html">
               <span>Contact Us</span>
             </a>
           </div>
@@ -53,22 +50,19 @@
           <div class="header_drop_left">
             <ul>
               <li class="current-menu-item">
-                <a href="#">Home</a>
+                <a href="https://zudikhin.github.io/casaverse/">Home</a>
               </li>
               <li>
-                <a href="#">About Us</a>
+                <a href="https://zudikhin.github.io/casaverse/about.html">About Us</a>
               </li>
               <li>
-                <a href="#">Properties</a>
+                <a href="https://zudikhin.github.io/casaverse/properties.html">Properties</a>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <a href="https://zudikhin.github.io/casaverse/neighborhoods.html">Neighborhoods</a>
               </li>
               <li>
-                <a href="#">Neighborhoods</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
+                <a href="https://zudikhin.github.io/casaverse/blog.html">Blog</a>
               </li>
             </ul>
           </div>
@@ -101,6 +95,12 @@
           </div>
           <div class="welcome_block_bot">
             <img class="welcome_block_bot_main" src="img/welcome/2.png" alt="">
+            <div id="featWelcome" class="welcome_block_bot_desk">
+              <img class="welcome_one parallaxed" src="img/welcome/welcome_desk_one.svg" alt="">
+              <img class="welcome_two parallaxed" src="img/welcome/welcome_desk_two.svg" alt="">
+              <img class="welcome_three parallaxed" src="img/welcome/welcome_desk_three.svg" alt="">
+              <img class="welcome_four parallaxed" src="img/welcome/welcome_four_desk.svg" alt="">
+            </div>
             <div class="welcome_block_bot_text">
               <p>We believe every property is unique, and that's why we provide personalized services to perfectly match your needs. Whether you’re a serious investor or a first-time home buyer, we’ve got you covered with our wide range of services, including property management, sales, leasing, investment consultancy, and market analysis.</p>
               <p>We're committed to being your go-to experts for all things real estate, from tips on Dubai's best neighbourhoods to expert advice. So why wait? Let's find your dream property together!  Reach out to us today to get started.</p>
@@ -183,7 +183,7 @@
       <div class="container">
         <div class="footer_block">
           <div class="footer_block_left">
-            <a href="#">
+            <a href="https://zudikhin.github.io/casaverse/">
               <img src="img/footer/logo.svg" alt="">
             </a>
             <p>Casaverse is dedicated to representing properties of unparalleled distinction in Dubai. With a deep understanding of the local market and years of experience, we have been able to cater to the unique needs of our clients and help them find their dream properties. Whether you're looking to buy, sell, or rent a property, Casaverse is here to help you every step of the way.</p>
@@ -246,12 +246,19 @@
 </html>
 
 <script>
+  var b = document.getElementById("featWelcome"); 
 
-  let bg = document.querySelector('.welcome_block_bot_main');
-  window.addEventListener('mousemove', function(e) {
-    let x = e.clientX / window.innerWidth;
-    let y = e.clientY / window.innerHeight;  
-    bg.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+  b.addEventListener("mousemove", function(event) {
+    parallaxed(event);
   });
-  
+
+  function parallaxed(e) {
+    var amountMovedX = (e.clientX * -0.3 / 8);
+    var amountMovedY = (e.clientY * -0.3 / 8);
+    var x = document.getElementsByClassName("parallaxed");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.transform='translate(' + amountMovedX + 'px,' + amountMovedY + 'px)'
+    }
+  }
 </script>
