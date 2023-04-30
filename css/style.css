@@ -171,6 +171,30 @@ input:focus {
     max-width: 1300px;
   }
 }
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
 .header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -181,6 +205,15 @@ input:focus {
   box-sizing: border-box;
   padding: 22px 0px;
   z-index: 2;
+  opacity: 0;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .header_block {
   display: -webkit-box;
@@ -410,6 +443,22 @@ input:focus {
     stroke-dashoffset: 0;
   }
 }
+@-webkit-keyframes opacityStar {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+@keyframes opacityStar {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
 .main {
   background: -webkit-gradient(linear, right top, left top, color-stop(3.89%, #00031E), color-stop(90.62%, #0D123D));
   background: linear-gradient(270deg, #00031E 3.89%, #0D123D 90.62%);
@@ -544,6 +593,7 @@ input:focus {
           order: 1;
   width: 248px;
   position: relative;
+  opacity: 0;
 }
 .main_block_img_main {
   width: 100%;
@@ -553,21 +603,51 @@ input:focus {
   right: -66px;
   top: 0px;
   width: 90px;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
 }
 .main_block_img_two {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 43px;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
 }
 .main_block_img_three {
   position: absolute;
   left: -120px;
   bottom: 0px;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
+}
+.main_block_img_four {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
+}
+.main.animation .main_block_img {
+  -webkit-animation: fadeInDown 0.5s linear alternate forwards;
+          animation: fadeInDown 0.5s linear alternate forwards;
 }
 .main.animation .main_anim_desk path {
-  -webkit-animation: mainDashLine 2s linear alternate forwards;
-          animation: mainDashLine 2s linear alternate forwards;
+  -webkit-animation: mainDashLine 0.7s linear alternate forwards;
+          animation: mainDashLine 0.7s linear alternate forwards;
 }
 .main.open {
   padding-top: 325px;
@@ -705,11 +785,53 @@ input:focus {
   }
 }
 
+@-webkit-keyframes founderDashLine {
+  from {
+    stroke-dashoffset: 370;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes founderDashLine {
+  from {
+    stroke-dashoffset: 370;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes founderDashArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes founderDashArrow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .about {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
   margin-top: 56px;
+  opacity: 0;
+}
+.about.animation {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
 }
 .about_block_left img {
   width: 100%;
@@ -791,6 +913,9 @@ input:focus {
   color: #fff;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+.about_block_right_bot_wrap_mob {
+  display: none;
 }
 @media (min-width: 768px) {
   .about_block_left img.mob {
@@ -921,11 +1046,33 @@ input:focus {
     margin-top: 30px;
   }
   .about_block_right_bot_right {
-    margin-left: 40px;
+    margin-left: 0px;
   }
   .about_block_right_bot_right p {
     font-size: 16px;
     line-height: 19px;
+  }
+  .about_block_right_bot_wrap {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+  }
+  .about_block_right_bot_wrap_mob {
+    display: block;
+  }
+  .about_block_right_bot_wrap_mob .mob_line {
+    stroke-dasharray: 370;
+    stroke-dashoffset: 370;
+  }
+  .about_block_right_bot_wrap_mob .mob_arrow {
+    opacity: 0;
+  }
+  .about.animation .mob_line {
+    -webkit-animation: founderDashLine 1.2s linear alternate forwards;
+            animation: founderDashLine 1.2s linear alternate forwards;
+  }
+  .about.animation .mob_arrow {
+    -webkit-animation: workDashArrow 0.1s linear 0.6s alternate forwards;
+            animation: workDashArrow 0.1s linear 0.6s alternate forwards;
   }
 }
 
@@ -934,6 +1081,15 @@ input:focus {
           box-sizing: border-box;
   position: relative;
   margin-top: 80px;
+  opacity: 0;
+}
+.featured.animation {
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
 }
 .featured_nav h2 {
   font-family: "Source Sans Pro", sans-serif;
@@ -1102,8 +1258,6 @@ input:focus {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 .featured_slider_item:hover .featured_slider_item_text_bottom_left_arrow {
   width: 35px;
@@ -1265,7 +1419,7 @@ input:focus {
 
 .five_feature_animation {
   position: absolute;
-  left: 50%;
+  left: 70%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: -36px;
@@ -1289,6 +1443,26 @@ input:focus {
 
 .five_feature_animation {
   height: 50px;
+}
+
+.neighborhoods_slider_item .one_feature_animation {
+  height: 68px;
+}
+
+.neighborhoods_slider_item .two_feature_animation {
+  height: 100px;
+}
+
+.neighborhoods_slider_item .three_feature_animation {
+  height: 9px;
+}
+
+.neighborhoods_slider_item .four_feature_animation {
+  height: 9px;
+}
+
+.neighborhoods_slider_item .five_feature_animation {
+  height: 70px;
 }
 
 @media (min-width: 768px) {
@@ -1377,9 +1551,25 @@ input:focus {
   text-transform: capitalize;
   color: #FFFFFF;
 }
-.neighborhoods_slider_item:hover svg path {
-  -webkit-animation: neighDashLine 2.5s linear alternate forwards;
-          animation: neighDashLine 2.5s linear alternate forwards;
+.neighborhoods_slider .one_feature_animation {
+  stroke-dashoffset: 1070;
+  stroke-dasharray: 1070;
+}
+.neighborhoods_slider .two_feature_animation {
+  stroke-dashoffset: 1070;
+  stroke-dasharray: 1070;
+}
+.neighborhoods_slider .three_feature_animation {
+  stroke-dashoffset: 1070;
+  stroke-dasharray: 1070;
+}
+.neighborhoods_slider .four_feature_animation {
+  stroke-dashoffset: 1070;
+  stroke-dasharray: 1070;
+}
+.neighborhoods_slider .five_feature_animation {
+  stroke-dashoffset: 1070;
+  stroke-dasharray: 1070;
 }
 .neighborhoods_all {
   display: -webkit-box;
@@ -1439,7 +1629,6 @@ input:focus {
   }
   .neighborhoods_wrap {
     margin-top: 64px;
-    cursor: url("../img/neighborhoods/arrows.svg"), auto;
   }
   .neighborhoods_slider .slick-list {
     padding: 50px 50px !important;
@@ -1451,7 +1640,6 @@ input:focus {
             transform: translateY(0px);
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
-    cursor: url("../img/neighborhoods/arrows.svg"), auto;
   }
   .neighborhoods_slider_item_main {
     height: 500px;
@@ -1475,11 +1663,29 @@ input:focus {
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
   }
+  .neighborhoods_slider_item:hover svg path {
+    -webkit-animation: neighDashLine 2.5s linear alternate forwards;
+            animation: neighDashLine 2.5s linear alternate forwards;
+  }
+  .neighborhoods_slider_item:hover .two_feature_animation path {
+    -webkit-animation: neighDashLine 0.9s linear alternate forwards;
+            animation: neighDashLine 0.9s linear alternate forwards;
+  }
   .neighborhoods_all {
     margin-top: 20px;
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .neighborhoods_slider .slick-active svg path {
+    -webkit-animation: neighDashLine 2.5s linear alternate forwards;
+            animation: neighDashLine 2.5s linear alternate forwards;
+  }
+  .neighborhoods_slider .slick-active .two_feature_animation path {
+    -webkit-animation: neighDashLine 0.9s linear alternate forwards;
+            animation: neighDashLine 0.9s linear alternate forwards;
+  }
+}
 .testimonials {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1892,6 +2098,22 @@ input:focus {
 .blog .big_star {
   display: none;
 }
+.blog.animation .small_star {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
+}
+.blog.animation .big_star {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
+}
 @media (min-width: 768px) {
   .blog_block_wrap_link {
     width: 222px;
@@ -2129,23 +2351,23 @@ input:focus {
   opacity: 0;
 }
 .work_block_wrap_text .mob_line {
-  -webkit-animation: workDashLineMob 2.4s linear alternate forwards;
-          animation: workDashLineMob 2.4s linear alternate forwards;
+  -webkit-animation: workDashLineMob 1s linear alternate forwards;
+          animation: workDashLineMob 1s linear alternate forwards;
   stroke-dasharray: 650;
   stroke-dashoffset: 650;
 }
 .work_block_wrap_text .mob_arrow {
   opacity: 0;
-  -webkit-animation: workDashArrow 0.1s linear 2.2s alternate forwards;
-          animation: workDashArrow 0.1s linear 2.2s alternate forwards;
+  -webkit-animation: workDashArrow 0.1s linear 1s alternate forwards;
+          animation: workDashArrow 0.1s linear 1s alternate forwards;
 }
 .work_block_wrap_text.animation .desk_line {
-  -webkit-animation: workDashLine 3s linear alternate forwards;
-          animation: workDashLine 3s linear alternate forwards;
+  -webkit-animation: workDashLine 1s linear alternate forwards;
+          animation: workDashLine 1s linear alternate forwards;
 }
 .work_block_wrap_text.animation .desk_arrow {
-  -webkit-animation: workDashArrow 0.1s linear 2.8s alternate forwards;
-          animation: workDashArrow 0.1s linear 2.8s alternate forwards;
+  -webkit-animation: workDashArrow 0.1s linear 1s alternate forwards;
+          animation: workDashArrow 0.1s linear 1s alternate forwards;
 }
 .work_block_wrap_btn {
   width: 100%;
@@ -2191,12 +2413,30 @@ input:focus {
 }
 .work_block_wrap .star_one {
   display: none;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.4s;
+          animation-duration: 1.4s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
 }
 .work_block_wrap .star_two {
   display: none;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
 }
 .work_block_wrap .star_three {
   display: none;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1.6s;
+          animation-duration: 1.6s;
+  -webkit-animation-name: opacityStar;
+          animation-name: opacityStar;
 }
 @media (min-width: 768px) {
   .work_block_wrap_btn {
@@ -2565,15 +2805,6 @@ input:focus {
   }
 }
 
-@-webkit-keyframes founderDashLine {
-  from {
-    stroke-dashoffset: 370;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
 @keyframes founderDashLine {
   from {
     stroke-dashoffset: 370;
@@ -2596,14 +2827,6 @@ input:focus {
   }
   to {
     stroke-dashoffset: 0;
-  }
-}
-@-webkit-keyframes founderDashArrow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 @keyframes founderDashArrow {
@@ -4299,8 +4522,6 @@ input:focus {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
   }
   .properties_block_item:hover .properties_block_item_desk_bottom_btn_line {
     width: 35px;
@@ -4965,8 +5186,6 @@ input:focus {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 .properties_single_info_right_list_item {
   width: 50%;
@@ -5980,8 +6199,14 @@ input:focus {
           justify-content: space-between;
   margin-top: 30px;
 }
-.footer_block_left_social a img {
-  width: 37px;
+.footer_block_left_social a .foot_link {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.footer_block_left_social a:hover .foot_link {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  fill: #20BDFF;
 }
 .footer_block_mid {
   margin-top: 36px;

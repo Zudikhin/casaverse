@@ -51,8 +51,16 @@ $(document).ready(function () {
 		centerMode: true,
 		variableWidth: true,
 		dots: false,
-        nextArrow: $('.neighborhoods_wrap_next')
+		arrows: false
 	});
+
+	$("body").on('wheel', (function(e) {
+		if (e.originalEvent.deltaY < 0) {
+			$(".neighborhoods_slider").slick("slickNext");
+		} else {
+			$(".neighborhoods_slider").slick("slickPrev");
+		}
+	}));
 
 	$('.testimonials_mob').slick({
 		slidesToShow: 1,
