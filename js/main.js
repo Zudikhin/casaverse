@@ -47,11 +47,19 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		// autoplay: true,
   		// autoplaySpeed: 1500,
+		cssEase: 'linear',
+		speed: 1500,
 		infinite: true,
 		centerMode: true,
 		variableWidth: true,
 		dots: false,
-		arrows: false
+		arrows: false,
+		responsive: [{
+			breakpoint: 1024,
+			settings: {
+				speed: 500,
+			}
+		}]
 	});
 
 	$("body").on('wheel', (function(e) {
