@@ -3758,6 +3758,39 @@ input:focus {
   }
 }
 
+@-webkit-keyframes visionDashLineMob {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes visionDashLineMob {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes visionDashLine {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes visionDashLine {
+  from {
+    stroke-dashoffset: 700;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .vision {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3800,6 +3833,17 @@ input:focus {
   line-height: 35px;
   text-align: center;
   color: #FFFFFF;
+  position: relative;
+}
+.vision_block_wrap_mob {
+  position: absolute;
+  left: -6px;
+  top: -8px;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+.vision_block_wrap_desk {
+  display: none;
 }
 .vision_block_wrap p {
   font-family: "Source Sans Pro", sans-serif;
@@ -3843,6 +3887,14 @@ input:focus {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
+.vision.animation .vision_block_wrap_mob {
+  -webkit-animation: visionDashLineMob 1s linear alternate forwards;
+          animation: visionDashLineMob 1s linear alternate forwards;
+}
+.vision.animation .vision_block_wrap_desk {
+  -webkit-animation: visionDashLine 1s linear alternate forwards;
+          animation: visionDashLine 1s linear alternate forwards;
+}
 @media (min-width: 768px) {
   .vision_block_wrap {
     padding: 50px 20px;
@@ -3859,6 +3911,17 @@ input:focus {
   .vision_block_wrap {
     padding: 62px 96px;
     position: relative;
+  }
+  .vision_block_wrap_mob {
+    display: none;
+  }
+  .vision_block_wrap_desk {
+    display: block;
+    position: absolute;
+    left: -14px;
+    top: -13px;
+    stroke-dasharray: 700;
+    stroke-dashoffset: 700;
   }
   .vision_block_wrap h2 {
     font-size: 52px;
@@ -4078,6 +4141,8 @@ input:focus {
     width: calc(25% - 12px);
     margin-left: 16px;
     margin-top: 16px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
   }
   .neighborhoods_page_block_item:first-child {
     margin-left: 0px;
@@ -4087,6 +4152,39 @@ input:focus {
   }
 }
 
+@-webkit-keyframes dreamDashLineMob {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dreamDashLineMob {
+  from {
+    stroke-dashoffset: 300;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes dreamDashLine {
+  from {
+    stroke-dashoffset: 450;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes dreamDashLine {
+  from {
+    stroke-dashoffset: 450;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .dream {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4127,6 +4225,35 @@ input:focus {
   line-height: 44px;
   text-align: center;
   color: #FFFFFF;
+  position: relative;
+}
+.dream_block_wrap h2 span {
+  position: relative;
+  z-index: 2;
+}
+.dream_block_wrap h2 svg {
+  z-index: 1;
+}
+.dream_block_wrap h2 .dream_mob_svg {
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+.dream_block_wrap h2 .dream_desk_svg {
+  display: none;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  left: 216px;
+  top: 0px;
+}
+.dream_block_wrap h2 .dream_img {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  opacity: 0;
 }
 .dream_block_wrap a {
   width: 100%;
@@ -4211,6 +4338,18 @@ input:focus {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
+.dream.animation .dream_mob_svg {
+  -webkit-animation: dreamDashLineMob 1s linear alternate forwards;
+          animation: dreamDashLineMob 1s linear alternate forwards;
+}
+.dream.animation .dream_desk_svg {
+  -webkit-animation: dreamDashLine 1s linear alternate forwards;
+          animation: dreamDashLine 1s linear alternate forwards;
+}
+.dream.animation .dream_img {
+  -webkit-animation: workDashArrow 0.1s linear 1s alternate forwards;
+          animation: workDashArrow 0.1s linear 1s alternate forwards;
+}
 @media (min-width: 768px) {
   .dream_block_wrap a {
     width: 222px;
@@ -4244,8 +4383,20 @@ input:focus {
     font-size: 52px;
     line-height: 57px;
   }
+  .dream_block_wrap h2 .dream_mob_svg {
+    display: none;
+  }
+  .dream_block_wrap h2 .dream_desk_svg {
+    display: block;
+    position: absolute;
+  }
   .dream_block_wrap h2 br {
     display: none;
+  }
+  .dream_block_wrap h2 .dream_img {
+    width: auto;
+    right: -30px;
+    top: -3px;
   }
   .dream_block_wrap a {
     margin-top: 0px;
@@ -4343,6 +4494,7 @@ input:focus {
 }
 .neighborhoods_single_list {
   margin-top: 40px;
+  opacity: 0;
 }
 .neighborhoods_single_list_item {
   -webkit-box-sizing: border-box;
@@ -4350,7 +4502,6 @@ input:focus {
   padding: 40px 16px;
   position: relative;
   margin-top: 40px;
-  opacity: 0;
 }
 .neighborhoods_single_list_item_wrap {
   position: relative;
@@ -4402,7 +4553,7 @@ input:focus {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.neighborhoods_single_list_item.animation {
+.neighborhoods_single_list.animation {
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-fill-mode: both;
@@ -4497,6 +4648,16 @@ input:focus {
   .neighborhoods_single_block_right ul li {
     font-size: 16px;
     line-height: 19px;
+  }
+  .neighborhoods_single_list_item {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  .neighborhoods_single_list_item:hover {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
   }
 }
 
