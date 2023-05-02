@@ -672,8 +672,12 @@ input:focus {
           animation: fadeInDown 0.5s linear alternate forwards;
 }
 .main.animation .main_anim_desk path {
-  -webkit-animation: mainDashLine 0.7s linear alternate forwards;
-          animation: mainDashLine 0.7s linear alternate forwards;
+  -webkit-animation: mainDashLine 1s linear alternate forwards;
+          animation: mainDashLine 1s linear alternate forwards;
+}
+.main.animation .main_anim_mob path {
+  -webkit-animation: mainDashLineMob 1s linear alternate forwards;
+          animation: mainDashLineMob 1s linear alternate forwards;
 }
 .main.open {
   padding-top: 325px;
@@ -2612,13 +2616,17 @@ input:focus {
   opacity: 0;
 }
 .work_block_wrap_text .mob_line {
-  -webkit-animation: workDashLineMob 1s linear alternate forwards;
-          animation: workDashLineMob 1s linear alternate forwards;
   stroke-dasharray: 650;
   stroke-dashoffset: 650;
 }
 .work_block_wrap_text .mob_arrow {
   opacity: 0;
+}
+.work_block_wrap_text.animation .mob_line {
+  -webkit-animation: workDashLineMob 1s linear alternate forwards;
+          animation: workDashLineMob 1s linear alternate forwards;
+}
+.work_block_wrap_text.animation .mob_arrow {
   -webkit-animation: workDashArrow 0.1s linear 1s alternate forwards;
           animation: workDashArrow 0.1s linear 1s alternate forwards;
 }
