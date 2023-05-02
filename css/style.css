@@ -1918,9 +1918,8 @@ input:focus {
   .testimonials_desk_item_wrap {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 0px 90px;
+    padding: 50px 90px;
     position: relative;
-    margin-top: 100px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1931,11 +1930,34 @@ input:focus {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  .testimonials_desk_item_wrap::before {
+    background-color: #3c6d79;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.05;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: center top;
+            transform-origin: center top;
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0, 1);
+    transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0, 1), -webkit-transform 0.3s cubic-bezier(0.4, 0, 0, 1);
+    z-index: -1;
+  }
+  .testimonials_desk_item_wrap:hover::before {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
   .testimonials_desk_item_wrap::after {
     content: "";
     position: absolute;
     left: 0px;
-    bottom: -50px;
+    bottom: 0px;
     width: 100%;
     height: 2px;
     background-color: #20BDFF;
@@ -3869,6 +3891,10 @@ input:focus {
   width: calc(50% - 10px);
   position: relative;
   margin-top: 20px;
+  height: 210px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 25px;
 }
 .neighborhoods_page_block_item_title {
   position: absolute;
@@ -3954,15 +3980,6 @@ input:focus {
   color: #FFFFFF;
   display: inline-block;
 }
-.neighborhoods_page_block_item_main {
-  width: 100%;
-  height: 210px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 25px;
-}
 .neighborhoods_page_block_item svg path {
   stroke-dashoffset: 570;
   stroke-dasharray: 570;
@@ -4006,6 +4023,9 @@ input:focus {
           animation: neighDashLine 0.9s linear alternate forwards;
 }
 @media (min-width: 768px) {
+  .neighborhoods_page_block_item {
+    height: 430px;
+  }
   .neighborhoods_page_block_item_title h3 {
     font-size: 35px;
     line-height: 39px;
@@ -4018,9 +4038,6 @@ input:focus {
     font-size: 16px;
     line-height: 19px;
     margin-left: 10px;
-  }
-  .neighborhoods_page_block_item_main {
-    height: 430px;
   }
   .neighborhoods_page_block_item::after {
     height: 430px;
