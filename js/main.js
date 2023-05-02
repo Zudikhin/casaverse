@@ -45,10 +45,10 @@ $(document).ready(function () {
 	$('.neighborhoods_slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		// autoplay: true,
-  		// autoplaySpeed: 1500,
+		autoplay: true,
+  		autoplaySpeed: 1500,
 		cssEase: 'linear',
-		speed: 1500,
+		speed: 500,
 		infinite: true,
 		centerMode: true,
 		variableWidth: true,
@@ -61,14 +61,6 @@ $(document).ready(function () {
 			}
 		}]
 	});
-
-	$("body").on('wheel', (function(e) {
-		if (e.originalEvent.deltaY < 0) {
-			$(".neighborhoods_slider").slick("slickNext");
-		} else {
-			$(".neighborhoods_slider").slick("slickPrev");
-		}
-	}));
 
 	$('.testimonials_mob').slick({
 		slidesToShow: 1,

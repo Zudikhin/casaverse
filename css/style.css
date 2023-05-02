@@ -1386,16 +1386,6 @@ input:focus {
   .featured_slider {
     margin-top: 68px;
   }
-  .featured_slider_item {
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-  }
-  .featured_slider_item:hover {
-    -webkit-transition: all 0.3s linear;
-    transition: all 0.3s linear;
-    -webkit-transform: scale(0.98);
-            transform: scale(0.98);
-  }
   .featured_all {
     margin-top: 20px;
   }
@@ -1747,6 +1737,9 @@ input:focus {
   .neighborhoods_wrap {
     margin-top: 64px;
   }
+  .neighborhoods_slider {
+    cursor: url(../img/neighborhoods/arrows.svg), auto;
+  }
   .neighborhoods_slider .slick-list {
     padding: 50px 50px !important;
   }
@@ -1757,6 +1750,7 @@ input:focus {
             transform: translateY(0px);
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
+    cursor: url(../img/neighborhoods/arrows.svg), auto;
   }
   .neighborhoods_slider_item_main {
     height: 500px;
@@ -5448,7 +5442,7 @@ input:focus {
   margin-top: 24px;
 }
 .properties_mob_filter .noUi-target {
-  height: 4px;
+  height: 6px;
 }
 .properties_mob_filter .noUi-connect {
   background: #20BDFF;
@@ -5464,6 +5458,7 @@ input:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   right: -13px;
+  top: -5px;
 }
 .properties_mob_filter .noUi-horizontal .noUi-handle::before {
   display: none;
@@ -5660,7 +5655,7 @@ input:focus {
   margin-top: 24px;
 }
 .properties_filter .noUi-target {
-  height: 4px;
+  height: 6px;
 }
 .properties_filter .noUi-connect {
   background: #20BDFF;
@@ -5676,6 +5671,7 @@ input:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
   right: -13px;
+  top: -5px;
 }
 .properties_filter .noUi-horizontal .noUi-handle::before {
   display: none;
