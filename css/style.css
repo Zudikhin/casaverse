@@ -3891,10 +3891,6 @@ input:focus {
   -webkit-animation: visionDashLineMob 1s linear alternate forwards;
           animation: visionDashLineMob 1s linear alternate forwards;
 }
-.vision.animation .vision_block_wrap_desk {
-  -webkit-animation: visionDashLine 1s linear alternate forwards;
-          animation: visionDashLine 1s linear alternate forwards;
-}
 @media (min-width: 768px) {
   .vision_block_wrap {
     padding: 50px 20px;
@@ -3953,6 +3949,10 @@ input:focus {
     display: block;
     right: 0px;
     bottom: 16px;
+  }
+  .vision_block:hover .vision_block_wrap_desk {
+    -webkit-animation: visionDashLine 1s linear alternate forwards;
+            animation: visionDashLine 1s linear alternate forwards;
   }
 }
 
@@ -4338,18 +4338,6 @@ input:focus {
   -webkit-animation-delay: 3s;
           animation-delay: 3s;
 }
-.dream.animation .dream_mob_svg {
-  -webkit-animation: dreamDashLineMob 1s linear alternate forwards;
-          animation: dreamDashLineMob 1s linear alternate forwards;
-}
-.dream.animation .dream_desk_svg {
-  -webkit-animation: dreamDashLine 1s linear alternate forwards;
-          animation: dreamDashLine 1s linear alternate forwards;
-}
-.dream.animation .dream_img {
-  -webkit-animation: workDashArrow 0.1s linear 1s alternate forwards;
-          animation: workDashArrow 0.1s linear 1s alternate forwards;
-}
 @media (min-width: 768px) {
   .dream_block_wrap a {
     width: 222px;
@@ -4416,8 +4404,30 @@ input:focus {
     position: absolute;
     right: 22%;
   }
+  .dream_block:hover .dream_desk_svg {
+    -webkit-animation: dreamDashLine 1s linear alternate forwards;
+            animation: dreamDashLine 1s linear alternate forwards;
+  }
+  .dream_block:hover .dream_img {
+    -webkit-animation: workDashArrow 0.1s linear 1s alternate forwards;
+            animation: workDashArrow 0.1s linear 1s alternate forwards;
+  }
 }
 
+@media only screen and (max-width: 1199px) {
+  .dream.animation .dream_mob_svg {
+    -webkit-animation: dreamDashLineMob 1s linear alternate forwards;
+            animation: dreamDashLineMob 1s linear alternate forwards;
+  }
+  .dream.animation .dream_desk_svg {
+    -webkit-animation: dreamDashLine 1s linear alternate forwards;
+            animation: dreamDashLine 1s linear alternate forwards;
+  }
+  .dream.animation .dream_img {
+    -webkit-animation: workDashArrow 0.1s linear 1s alternate forwards;
+            animation: workDashArrow 0.1s linear 1s alternate forwards;
+  }
+}
 .neighborhoods_single_block {
   margin-top: 48px;
   opacity: 0;
